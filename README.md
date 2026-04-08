@@ -71,4 +71,16 @@ This is a modern JavaScript Single Page Application (SPA) built with Vite. It pr
 
 ---
 
+---
+
+## Contributors
+Big Thanks to the following contributors who contributed in this project:
+1. Vince
+2. Wilson
+3. Rey Arby
+4. Zeldrick 
+5. Raecell Ann
+
+---
+
 For more details, see the individual `README.md` files in each subproject.
