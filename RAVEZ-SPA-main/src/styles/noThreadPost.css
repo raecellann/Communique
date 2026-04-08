@@ -1,0 +1,28 @@
+.no-post-container {
+    display: flex;
+    
+}
+
+.no-post-container img {
+    width: 350px;
+}
+
+.post-again-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 50px;
+}
+
+.post-again {
+    color: white;
+    font-size: 1rem;
+    font-family: "Inter";
+    text-align: center;
+    background-color: rgb(255, 255, 255,0.2);
+    width: 190px;
+    padding: 8px;
+    border-radius: 5px;
+}

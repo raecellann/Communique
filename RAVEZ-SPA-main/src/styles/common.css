@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+  width: auto;
+}
+
+#app {
+  width: 100%;
+}

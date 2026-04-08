@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Tilt+Neon&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/navigation.css">
+    <link rel="stylesheet" href="testing.css">
+  </head>
+  <body>
+    <!-- This is for testing of HTML Before going on the SPA or Javascript 🧙‍♂️ -->
+    <div id="app">
+        <div id="container">
+          
+            <div id="dim-overlay" class="visible"></div>
+            <div class="create-post-popper visible">
+              <div class="create-post-user-image-container">
+                <div class="create-post-image-container">
+                  <img src="https://res.cloudinary.com/dhisbk3b2/image/upload/v1730429760/women_user_ohu8ga.png" alt="yeshel-profile" id="user-image">
+                </div>  
+              </div>
+              <div class="create-post-data-container">
+                <div class="top-container-create-post">
+                  <span class="poster-username-create-post">@Yeshel</span>
+                  <span class="circle-cp"></span>
+                  <span class="time-posted-create-post">Now</span>
+                  <div class="create-post-option-btn">
+                    <span class="circle1"></span>
+                    <span class="circle2"></span>
+                    <span class="circle3"></span>
+                  </div>
+                </div>
+                <div class="content-container-create-post">
+                  <textarea placeholder="What's on your mind?" rows="4" cols="50" id="create-post-content"></textarea>
+                </div>
+                <div class="bottom-container-create-post">
+                  <span>Followers can like and reply to this Thread 🤓☝️</span>
+                  <div class="button-create-post-container">
+                    <span id="cp-cancel">Cancel</span>
+                    <span id="cp-post">Post</span>
+                  </div>
+                </div>
+              </div>
+              
+
+              </div>
+            </div>
+            
+            <navigation id="navigation">
+              <div class="settings-container-popper" id="popper">
+                <a href='/sign-up' id="new-acc">Add new Account</a>
+                <a href='/sign-in' id="log-out">Log out Account</a>
+              </div>
+              <div class="setting-icon-btn">
+                  <svg id="settings-btn-icon" width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M51.2373 12.7907C51.2772 12.4995 51.298 12.2027 51.2999 11.9003C51.2996 10.366 50.7294 8.88442 49.6962 7.73379C48.663 6.58316 47.2379 5.84253 45.6883 5.6509C44.1387 5.45928 42.5713 5.82983 41.28 6.69301C39.9888 7.5562 39.0626 8.85267 38.6753 10.3391C38.288 11.8256 38.4661 13.3998 39.1763 14.7664C39.8865 16.1329 41.0799 17.1979 42.5326 17.7614C43.9852 18.3249 45.5973 18.3481 47.0661 17.8268C48.535 17.3055 49.7598 16.2754 50.5105 14.9299L50.5247 14.9019C50.881 14.2579 51.129 13.5467 51.2373 12.7907ZM7.83745 11.2003H35.6535C35.5459 12.6336 35.7801 14.0717 36.3375 15.4003H7.83745C7.27055 15.4003 6.72687 15.1791 6.32601 14.7853C5.92515 14.3914 5.69995 13.8573 5.69995 13.3003C5.69995 12.7434 5.92515 12.2092 6.32601 11.8154C6.72687 11.4216 7.27055 11.2003 7.83745 11.2003ZM5.69995 27.3003C5.69995 26.7434 5.92515 26.2092 6.32601 25.8154C6.72687 25.4216 7.27055 25.2003 7.83745 25.2003H49.1624C49.7294 25.2003 50.273 25.4216 50.6739 25.8154C51.0748 26.2092 51.2999 26.7434 51.2999 27.3003C51.2999 27.8573 51.0748 28.3914 50.6739 28.7853C50.273 29.1791 49.7294 29.4003 49.1624 29.4003H7.83745C7.27055 29.4003 6.72687 29.1791 6.32601 28.7853C5.92515 28.3914 5.69995 27.8573 5.69995 27.3003ZM7.83745 39.2003C7.27055 39.2003 6.72687 39.4216 6.32601 39.8154C5.92515 40.2092 5.69995 40.7434 5.69995 41.3003C5.69995 41.8573 5.92515 42.3914 6.32601 42.7853C6.72687 43.1791 7.27055 43.4003 7.83745 43.4003H49.1624C49.7294 43.4003 50.273 43.1791 50.6739 42.7853C51.0748 42.3914 51.2999 41.8573 51.2999 41.3003C51.2999 40.7434 51.0748 40.2092 50.6739 39.8154C50.273 39.4216 49.7294 39.2003 49.1624 39.2003H7.83745Z" fill="#F8F8F8" fill-opacity="0.5"/>
+                  </svg>                        
+              </div>
+          
+              <a href="/search" id="search-icon-btn">
+                 <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.4583 34.7085C29.2238 34.7085 34.7083 29.224 34.7083 22.4585C34.7083 15.693 29.2238 10.2085 22.4583 10.2085C15.6928 10.2085 10.2083 15.693 10.2083 22.4585C10.2083 29.224 15.6928 34.7085 22.4583 34.7085Z" stroke="#F8F8F8" stroke-opacity="0.75" stroke-width="3.125"/>
+                      <path d="M40.8333 40.8335L34.7083 34.7085" stroke="#F8F8F8" stroke-opacity="0.75" stroke-width="3.125" stroke-linecap="round"/>
+                  </svg>
+                  <span class="icon-text">Search</span>
+              </a>
+              <a href="/home" id="home-icon-btn">
+                  <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.3961 3.86494C22.9647 3.32736 23.7175 3.02783 24.5 3.02783C25.2825 3.02783 26.0353 3.32736 26.6039 3.86494L41.4387 17.8881C42.3574 18.7548 42.875 19.9645 42.875 21.2263V38.2844C42.875 39.5027 42.391 40.6712 41.5295 41.5326C40.668 42.3941 39.4996 42.8781 38.2812 42.8781H32.1562C31.5527 42.8781 30.9551 42.7592 30.3976 42.5282C29.8401 42.2971 29.3335 41.9585 28.9069 41.5316C28.4803 41.1047 28.142 40.5979 27.9113 40.0402C27.6806 39.4825 27.5621 38.8848 27.5625 38.2813V30.6251C27.5625 30.219 27.4012 29.8295 27.114 29.5423C26.8268 29.2551 26.4374 29.0938 26.0312 29.0938H22.9688C22.5626 29.0938 22.1732 29.2551 21.886 29.5423C21.5988 29.8295 21.4375 30.219 21.4375 30.6251V38.2813C21.4375 39.4997 20.9535 40.6681 20.092 41.5296C19.2305 42.3911 18.0621 42.8751 16.8438 42.8751H10.7188C9.50041 42.8751 8.33197 42.3911 7.47048 41.5296C6.60898 40.6681 6.125 39.4997 6.125 38.2813V21.2232C6.125 19.9614 6.64563 18.7518 7.56438 17.8851L22.3961 3.86494ZM24.5 6.08832L9.66525 20.1146C9.51465 20.2573 9.39464 20.4292 9.31252 20.6198C9.23039 20.8104 9.18786 21.0157 9.1875 21.2232V38.2813C9.1875 38.6874 9.34883 39.0769 9.63599 39.3641C9.92316 39.6512 10.3126 39.8126 10.7188 39.8126H16.8438C17.2499 39.8126 17.6393 39.6512 17.9265 39.3641C18.2137 39.0769 18.375 38.6874 18.375 38.2813V30.6251C18.375 29.4067 18.859 28.2383 19.7205 27.3768C20.582 26.5153 21.7504 26.0313 22.9688 26.0313H26.0312C27.2496 26.0313 28.418 26.5153 29.2795 27.3768C30.141 28.2383 30.625 29.4067 30.625 30.6251V38.2813C30.625 38.6874 30.7863 39.0769 31.0735 39.3641C31.3607 39.6512 31.7501 39.8126 32.1562 39.8126H38.2812C38.6874 39.8126 39.0768 39.6512 39.364 39.3641C39.6512 39.0769 39.8125 38.6874 39.8125 38.2813V21.2232C39.8126 21.0152 39.7702 20.8093 39.6881 20.6182C39.6059 20.427 39.4857 20.2546 39.3348 20.1115L24.5 6.08832Z" fill="#F8F8F8" fill-opacity="0.75"/>
+                  </svg>
+                  <span class="icon-text">Home</span>
+              </a>
+              <a href="/thread" id="thread-icon-btn">
+                  <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.5317 10.9871H11.8799C10.6244 10.9871 9.42024 11.5187 8.53243 12.4651C7.64461 13.4114 7.14584 14.6949 7.14584 16.0332V38.7411C7.14584 40.0794 7.64461 41.3629 8.53243 42.3093C9.42024 43.2556 10.6244 43.7873 11.8799 43.7873H35.5504C36.806 43.7873 38.0101 43.2556 38.8979 42.3093C39.7858 41.3629 40.2845 40.0794 40.2845 38.7411V27.3872" stroke="#F8F8F8" stroke-opacity="0.75" stroke-width="3.57143" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M35.5513 13.5101L37.8071 16.0332M40.2854 8.38069C40.9175 9.07557 41.2677 10.0077 41.2602 10.9757C41.2527 11.9436 40.888 12.8694 40.2452 13.553L23.716 31.1718L16.6149 33.6949L18.9819 26.1256L35.5205 8.34789C36.1022 7.72388 36.8802 7.35172 37.7042 7.30326C38.5282 7.2548 39.3398 7.53348 39.9824 8.08549L40.2854 8.38069Z" stroke="#F8F8F8" stroke-opacity="0.75" stroke-width="3.57143" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span class="icon-text">Thread</span>                        
+              </a>
+              <a href="/liked" id="liked-icon-btn">
+                  <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.0548 13.2218L23.0916 14.1393C23.2164 14.2674 23.366 14.3692 23.5315 14.4388C23.697 14.5084 23.875 14.5442 24.0548 14.5442C24.2346 14.5442 24.4126 14.5084 24.578 14.4388C24.7435 14.3692 24.8931 14.2674 25.0179 14.1393L24.0548 13.2218ZM15.1385 32.4888C14.8641 32.2656 14.5113 32.1594 14.1578 32.1934C13.8042 32.2275 13.4788 32.3991 13.2532 32.6705C13.0275 32.9419 12.9201 33.2909 12.9546 33.6407C12.989 33.9904 13.1625 34.3123 13.4369 34.5355L15.1385 32.4888ZM6.82857 27.1798C6.91289 27.3323 7.02675 27.4668 7.16363 27.5757C7.30051 27.6847 7.45775 27.7659 7.62635 27.8147C7.79496 27.8635 7.97164 27.879 8.14629 27.8603C8.32095 27.8416 8.49018 27.789 8.6443 27.7056C8.79842 27.6222 8.93442 27.5095 9.04455 27.3741C9.15467 27.2387 9.23675 27.0832 9.28611 26.9164C9.33546 26.7496 9.35112 26.5749 9.3322 26.4021C9.31328 26.2293 9.26014 26.0619 9.17582 25.9094L6.82857 27.1798ZM7.55629 19.6389C7.55629 15.8454 9.72339 12.6625 12.6824 11.3233C15.5576 10.023 19.4209 10.3671 23.0916 14.1393L25.0179 12.3061C20.6659 7.82988 15.6075 7.0906 11.5694 8.91673C7.6205 10.704 4.88086 14.8539 4.88086 19.6389H7.55629ZM17.8068 37.9231C18.7217 38.6359 19.7027 39.3946 20.6962 39.9698C21.6897 40.545 22.8241 41.0108 24.0548 41.0108V38.3642C23.5019 38.3642 22.8526 38.1525 22.0464 37.6849C21.2384 37.2191 20.4019 36.5769 19.4637 35.8447L17.8068 37.9231ZM30.3028 37.9231C32.8462 35.9382 36.0996 33.6656 38.6501 30.8232C41.2489 27.9297 43.2287 24.3427 43.2287 19.6389H40.5533C40.5533 23.517 38.948 26.504 36.6507 29.0659C34.3052 31.6772 31.3498 33.7362 28.6458 35.8447L30.3028 37.9231ZM43.2287 19.6389C43.2287 14.8539 40.4908 10.704 36.5401 8.91673C32.502 7.0906 27.4472 7.82988 23.0916 12.3043L25.0179 14.1393C28.6886 10.3688 32.5519 10.023 35.4271 11.3233C38.3862 12.6625 40.5533 15.8437 40.5533 19.6389H43.2287ZM28.6458 35.8447C27.7076 36.5769 26.8711 37.2191 26.0631 37.6849C25.2551 38.1507 24.6077 38.3642 24.0548 38.3642V41.0108C25.2855 41.0108 26.4199 40.5432 27.4133 39.9698C28.4086 39.3946 29.3878 38.6359 30.3028 37.9231L28.6458 35.8447ZM19.4637 35.8447C18.044 34.7384 16.601 33.6798 15.1385 32.4888L13.4369 34.5355C14.9173 35.7406 16.4833 36.8909 17.8068 37.9231L19.4637 35.8447ZM9.17582 25.9112C8.10123 23.9924 7.54353 21.8324 7.55629 19.6389H4.88086C4.88086 22.5289 5.62998 25.0114 6.82857 27.1798L9.17582 25.9112Z" fill="#F8F8F8" fill-opacity="0.75"/>
+                  </svg>
+                  <span class="icon-text">Likes</span>
+              </a>
+              <a href="/profile" id="profile-icon-btn">
+                  <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M14.4516 16.0113C14.4516 14.8279 14.6857 13.6561 15.1404 12.5628C15.5951 11.4695 16.2616 10.4761 17.1018 9.63934C17.942 8.80256 18.9395 8.1388 20.0373 7.68594C21.1351 7.23308 22.3117 7 23.5 7C24.6883 7 25.8649 7.23308 26.9627 7.68594C28.0605 8.1388 29.058 8.80256 29.8982 9.63934C30.7384 10.4761 31.4049 11.4695 31.8596 12.5628C32.3143 13.6561 32.5484 14.8279 32.5484 16.0113C32.5484 18.4012 31.5951 20.6932 29.8982 22.3832C28.2013 24.0731 25.8998 25.0225 23.5 25.0225C21.1002 25.0225 18.7987 24.0731 17.1018 22.3832C15.4049 20.6932 14.4516 18.4012 14.4516 16.0113ZM23.5 10.1804C21.9472 10.1804 20.458 10.7948 19.36 11.8882C18.262 12.9817 17.6452 14.4648 17.6452 16.0113C17.6452 17.5577 18.262 19.0408 19.36 20.1343C20.458 21.2278 21.9472 21.8421 23.5 21.8421C25.0528 21.8421 26.542 21.2278 27.64 20.1343C28.738 19.0408 29.3548 17.5577 29.3548 16.0113C29.3548 14.4648 28.738 12.9817 27.64 11.8882C26.542 10.7948 25.0528 10.1804 23.5 10.1804ZM14.9839 31.3834C13.7134 31.3834 12.495 31.886 11.5966 32.7807C10.6982 33.6754 10.1935 34.8888 10.1935 36.1541V38.673C10.1935 38.7111 10.2212 38.7451 10.2595 38.7514C19.029 40.1763 27.9731 40.1763 36.7405 38.7514C36.7585 38.7473 36.7748 38.7374 36.7867 38.7232C36.7986 38.7091 36.8055 38.6914 36.8065 38.673V36.1541C36.8065 34.8888 36.3018 33.6754 35.4034 32.7807C34.505 31.886 33.2866 31.3834 32.0161 31.3834H31.2923C31.2353 31.3844 31.1787 31.3929 31.1241 31.4088L29.2824 32.0089C25.5251 33.2307 21.4749 33.2307 17.7175 32.0089L15.8738 31.4088C15.8205 31.3933 15.7654 31.3847 15.7099 31.3834H14.9839ZM7 36.1541C7 34.0453 7.84116 32.0229 9.33842 30.5318C10.8357 29.0407 12.8664 28.203 14.9839 28.203H15.7077C16.1052 28.2044 16.4912 28.2652 16.8659 28.3853L18.7097 28.9853C21.8224 29.9974 25.1776 29.9974 28.2903 28.9853L30.1341 28.3853C30.5066 28.2644 30.8984 28.203 31.2901 28.203H32.0161C34.1336 28.203 36.1643 29.0407 37.6616 30.5318C39.1588 32.0229 40 34.0453 40 36.1541V38.673C40 40.2717 38.8375 41.6329 37.2535 41.8895C28.1448 43.3702 18.8552 43.3702 9.74645 41.8895C8.98039 41.764 8.28391 41.3718 7.78097 40.7828C7.27804 40.1938 7.0013 39.4461 7 38.673V36.1541Z" fill="#F8F8F8" fill-opacity="0.75"/>
+                  </svg>
+                  <span class="icon-text">Profile</span>                        
+              </a>
+            </navigation>
+
+
+            <main id="main">
+              <div class="page-title">
+                <h1>PROFILE</h1>
+              </div>
+
+              <div class="profile-container">
+
+                <div class="user-avatar-container">
+                  <img src="https://res.cloudinary.com/dhisbk3b2/image/upload/v1730429760/women_user_ohu8ga.png" alt="yeshel-profile" id="userAvatar">
+                </div>
+
+                <div class="user-avatar-container2">
+
+                  <div class="profile-top-container">
+
+                    <div class="username">
+                      <h1>@Yeshel</h1>
+                    </div>
+
+                    <a class="edit-profile-btn" href="">Edit Profile</a>
+
+                    <a class="delete-profile-btn" href="">Delete Profile</a>
+
+                  </div>
+
+                  <div class="profile-bottom-container">
+
+                    <a class="post-container" href=""><span>20</span> post</a>
+
+                    <a class="follower-container" href=""><span>30 </span> followers</a>
+
+                    <a class="following-container" href=""><span>20 </span> following</a>
+
+                  </div>
+                  
+                </div>
+
+              </div>
+
+              <a class="delete-all-option-btn-container" href="">
+                <div class="delete-all-option-btn">
+                  <span class="circle1"></span>
+                  <span class="circle2"></span>
+                  <span class="circle3"></span>
+                </div>
+              </a>
+              
+              <div class="thread-home-container">
+
+                <div class="thread-post" data-post-id="1">
+                  <div class="thread-user-image-container">
+                    <div class="image-container">
+                      <img src="https://res.cloudinary.com/dhisbk3b2/image/upload/v1730429760/women_user_ohu8ga.png" alt="yeshel-profile" id="user-image">
+                    </div>  
+                  </div>
+                  <div class="thread-post-data-container">
+                    <div class="top-container">
+                      <span class="poster-username">@Yeshel</span>
+                      <span class="circle"></span>
+                      <span class="time-posted">1h</span>
+                      <div class="thread-post-option-btn">
+                        <span class="circle1"></span>
+                        <span class="circle2"></span>
+                        <span class="circle3"></span>
+                      </div>
+                    </div>
+                    <div class="content-container">
+                      <span>Kapag hindi lumabas sa exam ‘yong pinag-aralan mo, ikaw nalang ang lumabas. </span>
+                    </div>
+                    <div class="bottom-container">
+                      <div class="heart-icon">
+                        <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 12.7451C8 17.3006 12.221 19.7278 15.3101 21.9011C16.4 22.6673 17.45 23.3896 18.5 23.3896C19.55 23.3896 20.6 22.6683 21.6899 21.9001C24.7801 19.7287 29 17.3006 29 12.746C29 8.19149 23.225 4.9587 18.5 9.33903C13.775 4.9587 8 8.18961 8 12.7451Z" fill="currentColor" fill-opacity="0.75"/>
+                        </svg>
+                        <span class="num-likes">0</span> 
+                      </div>
+                      <div class="comment-icon">
+                        <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.25 8.48322V9.8655M12.5 8.48322V9.8655M17.75 8.48322V9.8655M23 2.26294H2V16.0858H6.725V18.3896L11.975 16.0858H23V2.26294Z" stroke="white" stroke-opacity="0.75" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="num-comments">0</span> 
+                      </div>
+                      <div class="repost-icon">
+                        <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M22.4 8.13239V10.6147C22.3983 11.9928 21.8078 13.3139 20.7579 14.2883C19.7081 15.2628 18.2847 15.8109 16.8 15.8124H3.13135L5.36565 13.7386L4.23435 12.6886L0.10095 16.525L3.80205 20.3897L4.99795 19.403L2.9815 17.2975H16.8C20.77 17.2975 24 14.2995 24 10.6147V6.64733L22.4 8.13239Z" fill="white" fill-opacity="0.8"/>
+                          <path d="M1.6 10.2435C1.60168 8.86541 2.19222 7.54426 3.24206 6.56984C4.2919 5.59542 5.7153 5.0473 7.2 5.04574H20.8686L18.6343 7.11958L19.7656 8.16961L23.899 4.33319L20.198 0.468506L19.002 1.45514L21.0185 3.56068H7.2C3.23 3.56068 0 6.55865 0 10.2435V14.2247L1.6 12.7396V10.2435Z" fill="white" fill-opacity="0.8"/>
+                        </svg>
+                        <span class="num-reposts">0</span>                          
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="thread-post" data-post-id="1">
+                  <div class="thread-user-image-container">
+                    <div class="image-container">
+                      <img src="https://res.cloudinary.com/dhisbk3b2/image/upload/v1730429760/women_user_ohu8ga.png" alt="yeshel-profile" id="user-image">
+                    </div>  
+                  </div>
+                  <div class="thread-post-data-container">
+                    <div class="top-container">
+                      <span class="poster-username">@Yeshel</span>
+                      <span class="circle"></span>
+                      <span class="time-posted">1h</span>
+                      <div class="thread-post-option-btn">
+                        <span class="circle1"></span>
+                        <span class="circle2"></span>
+                        <span class="circle3"></span>
+                      </div>
+                    </div>
+                    <div class="content-container">
+                      <span>Kapag hindi lumabas sa exam ‘yong pinag-aralan mo, ikaw nalang ang lumabas. </span>
+                    </div>
+                    <div class="bottom-container">
+                      <div class="heart-icon">
+                        <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 12.7451C8 17.3006 12.221 19.7278 15.3101 21.9011C16.4 22.6673 17.45 23.3896 18.5 23.3896C19.55 23.3896 20.6 22.6683 21.6899 21.9001C24.7801 19.7287 29 17.3006 29 12.746C29 8.19149 23.225 4.9587 18.5 9.33903C13.775 4.9587 8 8.18961 8 12.7451Z" fill="currentColor" fill-opacity="0.75"/>
+                        </svg>
+                        <span class="num-likes">0</span> 
+                      </div>
+                      <div class="comment-icon">
+                        <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.25 8.48322V9.8655M12.5 8.48322V9.8655M17.75 8.48322V9.8655M23 2.26294H2V16.0858H6.725V18.3896L11.975 16.0858H23V2.26294Z" stroke="white" stroke-opacity="0.75" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="num-comments">0</span> 
+                      </div>
+                      <div class="repost-icon">
+                        <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M22.4 8.13239V10.6147C22.3983 11.9928 21.8078 13.3139 20.7579 14.2883C19.7081 15.2628 18.2847 15.8109 16.8 15.8124H3.13135L5.36565 13.7386L4.23435 12.6886L0.10095 16.525L3.80205 20.3897L4.99795 19.403L2.9815 17.2975H16.8C20.77 17.2975 24 14.2995 24 10.6147V6.64733L22.4 8.13239Z" fill="white" fill-opacity="0.8"/>
+                          <path d="M1.6 10.2435C1.60168 8.86541 2.19222 7.54426 3.24206 6.56984C4.2919 5.59542 5.7153 5.0473 7.2 5.04574H20.8686L18.6343 7.11958L19.7656 8.16961L23.899 4.33319L20.198 0.468506L19.002 1.45514L21.0185 3.56068H7.2C3.23 3.56068 0 6.55865 0 10.2435V14.2247L1.6 12.7396V10.2435Z" fill="white" fill-opacity="0.8"/>
+                        </svg>
+                        <span class="num-reposts">0</span>                          
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="thread-post" data-post-id="1">
+                  <div class="thread-user-image-container">
+                    <div class="image-container">
+                      <img src="https://res.cloudinary.com/dhisbk3b2/image/upload/v1730429760/women_user_ohu8ga.png" alt="yeshel-profile" id="user-image">
+                    </div>  
+                  </div>
+                  <div class="thread-post-data-container">
+                    <div class="top-container">
+                      <span class="poster-username">@Yeshel</span>
+                      <span class="circle"></span>
+                      <span class="time-posted">1h</span>
+                      <div class="thread-post-option-btn">
+                        <span class="circle1"></span>
+                        <span class="circle2"></span>
+                        <span class="circle3"></span>
+                      </div>
+                    </div>
+                    <div class="content-container">
+                      <span>Kapag hindi lumabas sa exam ‘yong pinag-aralan mo, ikaw nalang ang lumabas. </span>
+                    </div>
+                    <div class="bottom-container">
+                      <div class="heart-icon">
+                        <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 12.7451C8 17.3006 12.221 19.7278 15.3101 21.9011C16.4 22.6673 17.45 23.3896 18.5 23.3896C19.55 23.3896 20.6 22.6683 21.6899 21.9001C24.7801 19.7287 29 17.3006 29 12.746C29 8.19149 23.225 4.9587 18.5 9.33903C13.775 4.9587 8 8.18961 8 12.7451Z" fill="currentColor" fill-opacity="0.75"/>
+                        </svg>
+                        <span class="num-likes">0</span> 
+                      </div>
+                      <div class="comment-icon">
+                        <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.25 8.48322V9.8655M12.5 8.48322V9.8655M17.75 8.48322V9.8655M23 2.26294H2V16.0858H6.725V18.3896L11.975 16.0858H23V2.26294Z" stroke="white" stroke-opacity="0.75" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="num-comments">0</span> 
+                      </div>
+                      <div class="repost-icon">
+                        <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M22.4 8.13239V10.6147C22.3983 11.9928 21.8078 13.3139 20.7579 14.2883C19.7081 15.2628 18.2847 15.8109 16.8 15.8124H3.13135L5.36565 13.7386L4.23435 12.6886L0.10095 16.525L3.80205 20.3897L4.99795 19.403L2.9815 17.2975H16.8C20.77 17.2975 24 14.2995 24 10.6147V6.64733L22.4 8.13239Z" fill="white" fill-opacity="0.8"/>
+                          <path d="M1.6 10.2435C1.60168 8.86541 2.19222 7.54426 3.24206 6.56984C4.2919 5.59542 5.7153 5.0473 7.2 5.04574H20.8686L18.6343 7.11958L19.7656 8.16961L23.899 4.33319L20.198 0.468506L19.002 1.45514L21.0185 3.56068H7.2C3.23 3.56068 0 6.55865 0 10.2435V14.2247L1.6 12.7396V10.2435Z" fill="white" fill-opacity="0.8"/>
+                        </svg>
+                        <span class="num-reposts">0</span>                          
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="thread-post" data-post-id="1">
+                  <div class="thread-user-image-container">
+                    <div class="image-container">
+                      <img src="https://res.cloudinary.com/dhisbk3b2/image/upload/v1730429760/women_user_ohu8ga.png" alt="yeshel-profile" id="user-image">
+                    </div>  
+                  </div>
+                  <div class="thread-post-data-container">
+                    <div class="top-container">
+                      <span class="poster-username">@Yeshel</span>
+                      <span class="circle"></span>
+                      <span class="time-posted">1h</span>
+                      <div class="thread-post-option-btn">
+                        <span class="circle1"></span>
+                        <span class="circle2"></span>
+                        <span class="circle3"></span>
+                      </div>
+                    </div>
+                    <div class="content-container">
+                      <span>Kapag hindi lumabas sa exam ‘yong pinag-aralan mo, ikaw nalang ang lumabas. </span>
+                    </div>
+                    <div class="bottom-container">
+                      <div class="heart-icon">
+                        <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 12.7451C8 17.3006 12.221 19.7278 15.3101 21.9011C16.4 22.6673 17.45 23.3896 18.5 23.3896C19.55 23.3896 20.6 22.6683 21.6899 21.9001C24.7801 19.7287 29 17.3006 29 12.746C29 8.19149 23.225 4.9587 18.5 9.33903C13.775 4.9587 8 8.18961 8 12.7451Z" fill="currentColor" fill-opacity="0.75"/>
+                        </svg>
+                        <span class="num-likes">0</span> 
+                      </div>
+                      <div class="comment-icon">
+                        <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.25 8.48322V9.8655M12.5 8.48322V9.8655M17.75 8.48322V9.8655M23 2.26294H2V16.0858H6.725V18.3896L11.975 16.0858H23V2.26294Z" stroke="white" stroke-opacity="0.75" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="num-comments">0</span> 
+                      </div>
+                      <div class="repost-icon">
+                        <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M22.4 8.13239V10.6147C22.3983 11.9928 21.8078 13.3139 20.7579 14.2883C19.7081 15.2628 18.2847 15.8109 16.8 15.8124H3.13135L5.36565 13.7386L4.23435 12.6886L0.10095 16.525L3.80205 20.3897L4.99795 19.403L2.9815 17.2975H16.8C20.77 17.2975 24 14.2995 24 10.6147V6.64733L22.4 8.13239Z" fill="white" fill-opacity="0.8"/>
+                          <path d="M1.6 10.2435C1.60168 8.86541 2.19222 7.54426 3.24206 6.56984C4.2919 5.59542 5.7153 5.0473 7.2 5.04574H20.8686L18.6343 7.11958L19.7656 8.16961L23.899 4.33319L20.198 0.468506L19.002 1.45514L21.0185 3.56068H7.2C3.23 3.56068 0 6.55865 0 10.2435V14.2247L1.6 12.7396V10.2435Z" fill="white" fill-opacity="0.8"/>
+                        </svg>
+                        <span class="num-reposts">0</span>                          
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="thread-post" data-post-id="1">
+                  <div class="thread-user-image-container">
+                    <div class="image-container">
+                      <img src="https://res.cloudinary.com/dhisbk3b2/image/upload/v1730429760/women_user_ohu8ga.png" alt="yeshel-profile" id="user-image">
+                    </div>  
+                  </div>
+                  <div class="thread-post-data-container">
+                    <div class="top-container">
+                      <span class="poster-username">@Yeshel</span>
+                      <span class="circle"></span>
+                      <span class="time-posted">1h</span>
+                      <div class="thread-post-option-btn">
+                        <span class="circle1"></span>
+                        <span class="circle2"></span>
+                        <span class="circle3"></span>
+                      </div>
+                    </div>
+                    <div class="content-container">
+                      <span>Kapag hindi lumabas sa exam ‘yong pinag-aralan mo, ikaw nalang ang lumabas. </span>
+                    </div>
+                    <div class="bottom-container">
+                      <div class="heart-icon">
+                        <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 12.7451C8 17.3006 12.221 19.7278 15.3101 21.9011C16.4 22.6673 17.45 23.3896 18.5 23.3896C19.55 23.3896 20.6 22.6683 21.6899 21.9001C24.7801 19.7287 29 17.3006 29 12.746C29 8.19149 23.225 4.9587 18.5 9.33903C13.775 4.9587 8 8.18961 8 12.7451Z" fill="currentColor" fill-opacity="0.75"/>
+                        </svg>
+                        <span class="num-likes">0</span> 
+                      </div>
+                      <div class="comment-icon">
+                        <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.25 8.48322V9.8655M12.5 8.48322V9.8655M17.75 8.48322V9.8655M23 2.26294H2V16.0858H6.725V18.3896L11.975 16.0858H23V2.26294Z" stroke="white" stroke-opacity="0.75" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="num-comments">0</span> 
+                      </div>
+                      <div class="repost-icon">
+                        <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M22.4 8.13239V10.6147C22.3983 11.9928 21.8078 13.3139 20.7579 14.2883C19.7081 15.2628 18.2847 15.8109 16.8 15.8124H3.13135L5.36565 13.7386L4.23435 12.6886L0.10095 16.525L3.80205 20.3897L4.99795 19.403L2.9815 17.2975H16.8C20.77 17.2975 24 14.2995 24 10.6147V6.64733L22.4 8.13239Z" fill="white" fill-opacity="0.8"/>
+                          <path d="M1.6 10.2435C1.60168 8.86541 2.19222 7.54426 3.24206 6.56984C4.2919 5.59542 5.7153 5.0473 7.2 5.04574H20.8686L18.6343 7.11958L19.7656 8.16961L23.899 4.33319L20.198 0.468506L19.002 1.45514L21.0185 3.56068H7.2C3.23 3.56068 0 6.55865 0 10.2435V14.2247L1.6 12.7396V10.2435Z" fill="white" fill-opacity="0.8"/>
+                        </svg>
+                        <span class="num-reposts">0</span>                          
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="thread-post" data-post-id="1">
+                  <div class="thread-user-image-container">
+                    <div class="image-container">
+                      <img src="https://res.cloudinary.com/dhisbk3b2/image/upload/v1730429760/women_user_ohu8ga.png" alt="yeshel-profile" id="user-image">
+                    </div>  
+                  </div>
+                  <div class="thread-post-data-container">
+                    <div class="top-container">
+                      <span class="poster-username">@Yeshel</span>
+                      <span class="circle"></span>
+                      <span class="time-posted">1h</span>
+                      <div class="thread-post-option-btn">
+                        <span class="circle1"></span>
+                        <span class="circle2"></span>
+                        <span class="circle3"></span>
+                      </div>
+                    </div>
+                    <div class="content-container">
+                      <span>Kapag hindi lumabas sa exam ‘yong pinag-aralan mo, ikaw nalang ang lumabas. </span>
+                    </div>
+                    <div class="bottom-container">
+                      <div class="heart-icon">
+                        <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 12.7451C8 17.3006 12.221 19.7278 15.3101 21.9011C16.4 22.6673 17.45 23.3896 18.5 23.3896C19.55 23.3896 20.6 22.6683 21.6899 21.9001C24.7801 19.7287 29 17.3006 29 12.746C29 8.19149 23.225 4.9587 18.5 9.33903C13.775 4.9587 8 8.18961 8 12.7451Z" fill="currentColor" fill-opacity="0.75"/>
+                        </svg>
+                        <span class="num-likes">0</span> 
+                      </div>
+                      <div class="comment-icon">
+                        <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.25 8.48322V9.8655M12.5 8.48322V9.8655M17.75 8.48322V9.8655M23 2.26294H2V16.0858H6.725V18.3896L11.975 16.0858H23V2.26294Z" stroke="white" stroke-opacity="0.75" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="num-comments">0</span> 
+                      </div>
+                      <div class="repost-icon">
+                        <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M22.4 8.13239V10.6147C22.3983 11.9928 21.8078 13.3139 20.7579 14.2883C19.7081 15.2628 18.2847 15.8109 16.8 15.8124H3.13135L5.36565 13.7386L4.23435 12.6886L0.10095 16.525L3.80205 20.3897L4.99795 19.403L2.9815 17.2975H16.8C20.77 17.2975 24 14.2995 24 10.6147V6.64733L22.4 8.13239Z" fill="white" fill-opacity="0.8"/>
+                          <path d="M1.6 10.2435C1.60168 8.86541 2.19222 7.54426 3.24206 6.56984C4.2919 5.59542 5.7153 5.0473 7.2 5.04574H20.8686L18.6343 7.11958L19.7656 8.16961L23.899 4.33319L20.198 0.468506L19.002 1.45514L21.0185 3.56068H7.2C3.23 3.56068 0 6.55865 0 10.2435V14.2247L1.6 12.7396V10.2435Z" fill="white" fill-opacity="0.8"/>
+                        </svg>
+                        <span class="num-reposts">0</span>                          
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </main>
+            <footer id="footer"></footer>
+        </div>
+    </div>
+  </body>
+</html>
+<!--
+  College of Mary Immaculate. Department of Computer Science.
+-->

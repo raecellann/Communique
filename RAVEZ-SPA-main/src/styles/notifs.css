@@ -1,0 +1,320 @@
+
+body {
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    overflow: auto;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    width: 1135px;
+}
+
+.logo {
+    position: absolute;
+    left: 60px;
+    top: 45px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.title h1 {
+    color: white;
+    font-family: "Syncopate", sans-serif;
+    font-size: 25px;
+    margin-top: 10%;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row; /* Ensure the contents are in a row */
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    width: 800px; /* Make the navbar span the full width */
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    overflow-x: auto; /* Add horizontal scrolling if needed */
+    white-space: nowrap; /* Prevent items from wrapping */
+}
+
+.nav-button {
+    font-family: 'Inter', sans-serif;
+    color: #6092C0;
+    background: transparent;
+    font-weight: 800;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+
+.nav-button:last-child {
+    margin-left: auto;
+}
+
+.nav-button.active:hover {
+    color: #001CB1;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 5px 4px 8px rgba(255, 255, 255, 0.596);
+    border-radius: 8px;
+}
+
+.notification-header .notification-title {
+    font-weight: bold;
+}
+
+.notification-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Inter", sans-serif;
+    color: #cecece98;
+    font-size: 10px;
+    width: 800px;    
+}
+
+.notification-counter {
+    font-size: 1rem;
+    padding: 2px 10px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+}
+
+.notification-container {
+    display: flex;
+    flex-direction: row; /* Align notifications in a row */
+    flex-wrap: wrap; /* Allow wrapping to the next line if needed */
+    justify-content: center;
+    align-items: center; /* Add space between notifications */
+    width: 800px;
+    height: 250px; /* Ensure full width */
+    column-gap: 50px;
+}
+
+.notification-type-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.notification-type-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.user-profile-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.user-profile-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.username {
+    width: 100px;
+}
+
+.username h1 {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.notification-status {
+    width: 250px;
+}
+
+.notification-status h1 {
+    color: rgb(125, 121, 121);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.view-post-btn a {
+    font-family: 'Inter', sans-serif;
+    color: #001CB1;
+    font-weight: 800;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.ignore-btn a {
+    font-family: 'Inter', sans-serif;
+    color: #001CB1;
+    font-weight: 800;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    background-color: #001CB1;
+    border-radius: 50%;
+}
+
+.post-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2px;
+}
+
+.post-time h1 {
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 800;
+    font-family: 'Inter', sans-serif;
+}
+
+.notification-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 22px;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+    width: 800px;
+}
+
+.notification-actions {
+    display: flex;
+    gap: 10px;
+    color: #6092C0;
+}
+
+
+.notification-actions a {
+    color: #6092C0;
+    text-decoration: none;
+}
+
+.notification-actions a:hover {
+    text-decoration: underline;
+}
+
+.notification-time {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.view-all {
+    display: flex;
+   margin-left: 720px;
+}
+
+.view-all a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+
+    .logo {
+        left: 5px;
+    }
+
+    .logo img {
+        height: 80px; 
+    }
+
+    .title h1 {
+        font-size: 20px;
+        margin-top: 20%; 
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: row;
+        width: 90%;
+        padding: 5px;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-top: 0%;
+    }
+
+    .nav-button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .notification-container {
+        width: 95%; 
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .notification-row {
+        width: 90%; 
+        padding: 15px;
+        height: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 5px;
+    }
+
+    .notification-actions {
+        margin-top: 5px; 
+    }
+
+    .view-all {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+

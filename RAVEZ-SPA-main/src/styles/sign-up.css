@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    font-family: 'IBM Plex Mono', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner-container {
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+}
+
+.banner-container img {
+    width: 100%;
+}
+
+.form-container {
+    width: 600px;
+    padding: 50px 50px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.07);
+    background-image: url('https://res.cloudinary.com/dpxfbom0j/image/upload/v1730361803/blue_gradient_un73ms.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-align: center;
+    line-height: 200%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.form-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.input-group.username-gender-group {
+    display: flex;
+    gap: 20px;
+    width: 85%;
+}
+
+.input-group.username-gender-group input,
+.input-group.username-gender-group select {
+    flex: 1;
+}
+
+.input-group input,
+.input-group select {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.26);
+    color: #ffffff;
+    font-family: 'IBM Plex Mono', sans-serif;
+}
+
+.input-group select {
+    width: 100px;
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0.26);
+    color: #a2a2a2;
+}
+
+.input-group input::placeholder {
+    font-family: 'IBM Plex Mono', sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+}
+input#create-email, input#create-password{
+    width: 85%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#create-acc {
+    width: 320px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #D9D9D9;
+    position: relative;
+    top: 5px;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+.button:hover #create-acc {
+    cursor: pointer;
+    color: #090808; 
+    transform: translate(7px, -7px);
+    border-color: #ffffff; 
+}
+
+#btn_back {
+    position: absolute;
+    top: 6px;
+    left: -4px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent; 
+    border-radius: 8px;
+    z-index: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.button:hover #btn_back {
+    border: 1px solid #D9D9D9;
+    background-color: rgba(96, 146, 192, 0.53);
+    transform: translate(2px, 2px); 
+}
+
+
+.show-password {
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+    margin-right: 331px;
+}
+
+.show-password input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.show-password label {
+    font-size: 0.5em;
+    color: #ccc;
+}
+
+.account-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.account-section p {
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 1rem;
+}
+.account-section p a{
+    color: yellow;
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+.account-section p::before,
+.account-section p::after {
+    content: "";
+    display: inline-block;
+    width: 85px;
+    height: 1px;
+    background-color: white;
+    vertical-align: middle;
+}
+
+.account-section p::before {
+    margin-right: 10px;
+}
+
+.account-section p::after {
+    margin-left: 10px;
+}
